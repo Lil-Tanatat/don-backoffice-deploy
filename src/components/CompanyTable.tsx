@@ -42,7 +42,6 @@ export default function CompanyTable({
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(itemsPerPage);
   const [windowWidth, setWindowWidth] = useState(0);
-  const router = useRouter();
 
   const handleEditCompany = (companyId: number) => {
     console.log("handleEditCompany called");
