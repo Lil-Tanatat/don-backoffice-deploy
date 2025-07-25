@@ -1,6 +1,5 @@
 import * as React from "react";
 import Image from "next/image";
-import Logo from "../../public/backoffice/images/New Navbar Logo.png";
 import {
   KeyboardSensor,
   MouseSensor,
@@ -441,7 +440,7 @@ export function DataTable({ data = [] }: { data?: z.infer<typeof schema>[] }) {
                 {/* Avatar/Icon */}
                 <div className="w-8 h-8 sm:w-10 md:w-12 sm:h-10 md:h-12 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
                   <Image
-                    src={Logo}
+                    src={"/backoffice/images/nav-logo.png"}
                     alt="logo"
                     width={isMobile ? 24 : 40}
                     height={isMobile ? 24 : 40}
