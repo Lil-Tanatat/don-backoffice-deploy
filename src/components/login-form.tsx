@@ -7,6 +7,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 import Link from "next/link";
 import { IconEye, IconEyeOff } from "@tabler/icons-react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 interface LoginFormProps
   extends Omit<React.ComponentProps<"form">, "onSubmit"> {
@@ -25,7 +26,7 @@ export function LoginForm({
   ...props
 }: LoginFormProps) {
   const [showPassword, setShowPassword] = useState(false);
-
+  const router = useRouter();
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     e.stopPropagation();
@@ -112,7 +113,7 @@ export function LoginForm({
         )}
         <Button
           type="button"
-          onClick={handleButtonClick}
+          onClick={() => router.push("/dashboard")}
           className="w-full rounded-full bg-highlight hover:bg-highlight/80 h-12 text-lg"
           disabled={isLoading}
         >
@@ -140,7 +141,7 @@ export function LoginForm({
           className="w-full bg-[#030650] text-white rounded-full h-12 text-lg cursor-pointer hover:bg-[#030650]/80 hover:text-white"
         >
           <Image
-            src="/images/thaiid.png"
+            src="/backoffice/images/thaiid.png"
             alt="ThaiID"
             className="w-10 h-10 rounded-full "
             aria-hidden="true"

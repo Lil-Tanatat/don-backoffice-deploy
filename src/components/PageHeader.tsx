@@ -16,7 +16,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
     <div
       className="flex flex-row gap-4 justify-center text-primary-foreground py-10 rounded-b-3xl mb-5"
       style={{
-        backgroundImage: "url('/images/header-bg.png')",
+        backgroundImage: "url('/backoffice/images/header-bg.png')",
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",

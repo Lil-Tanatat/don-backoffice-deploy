@@ -242,7 +242,12 @@ export default function CompanyTable({
                 className: "w-full",
                 style: {
                   width: "100%",
-                  minWidth: windowWidth < 640 ? "600px" : windowWidth < 1024 ? "800px" : "1000px",
+                  minWidth:
+                    windowWidth < 640
+                      ? "600px"
+                      : windowWidth < 1024
+                      ? "800px"
+                      : "1000px",
                   borderRadius: "0",
                   overflow: "visible",
                   boxShadow: "none",
@@ -280,7 +285,6 @@ export default function CompanyTable({
               }}
               mantineTableBodyCellProps={({ column }) => ({
                 style: {
-
                   padding: isMobile
                     ? responsiveStyles.bodyCell.paddingMobile
                     : responsiveStyles.bodyCell.paddingDesktop,
@@ -317,7 +321,7 @@ export default function CompanyTable({
               renderEmptyRowsFallback={() => (
                 <div className="flex justify-center items-center py-8 sm:py-12 lg:py-16 w-full">
                   <Image
-                    src="/images/no-data.png"
+                    src="/backoffice/images/no-data.png"
                     alt="No data available"
                     width={300}
                     height={225}

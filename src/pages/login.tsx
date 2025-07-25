@@ -54,7 +54,7 @@ export default function LoginPage() {
       <div
         className="flex flex-col gap-4 p-6 md:p-10"
         style={{
-          backgroundImage: "url('/images/right-section.png')",
+          backgroundImage: "url('/backoffice/images/right-section.png')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
@@ -63,7 +63,7 @@ export default function LoginPage() {
         <div className="flex flex-1 items-center justify-center ">
           <div className="w-full lg:w-2/3 xl:w-1/2">
             <Image
-              src="/images/login-logo.jpg"
+              src="/backoffice/images/login-logo.jpg"
               alt="logo"
               width={200}
               height={200}
@@ -80,7 +80,7 @@ export default function LoginPage() {
       </div>
       <div className="bg-muted relative hidden lg:block">
         <Image
-          src="/images/login-bg.png"
+          src="/backoffice/images/login-bg.png"
           alt="Image"
           fill
           className="object-cover"

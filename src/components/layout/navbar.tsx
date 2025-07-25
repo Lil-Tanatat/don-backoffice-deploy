@@ -25,8 +25,8 @@ const NAV_LINKS = [
 const AUTH_LINKS = [{ title: "รายชื่อผู้ใช้งาน", href: "/user/list" }];
 
 // const LANGUAGES = [
-//   { code: "TH", name: "ไทย", flag: "/images/th-flag.png", isActive: true },
-//   { code: "EN", name: "English", flag: "/images/en-flag.png", isActive: false },
+//   { code: "TH", name: "ไทย", flag: "/backoffice/images/th-flag.png", isActive: true },
+//   { code: "EN", name: "English", flag: "/backoffice/images/en-flag.png", isActive: false },
 // ];
 
 // Font size options
@@ -197,7 +197,7 @@ export function Navbar() {
           <div className="flex items-center">
             <Link href="/dashboard" className="flex-shrink-0">
               <Image
-                src="/images/logo.png"
+                src="/backoffice/images/logo.png"
                 alt="logo"
                 width={50}
                 height={50}
@@ -401,7 +401,7 @@ export function Navbar() {
               <div className="flex items-center justify-between p-4 border-b bg-gray-50">
                 <div className="flex items-center space-x-3">
                   <Image
-                    src="/images/logo.png"
+                    src="/backoffice/images/logo.png"
                     alt="logo"
                     width={40}
                     height={40}

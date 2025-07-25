@@ -7,7 +7,7 @@ export function Footer() {
   return (
     <div
       style={{
-        backgroundImage: "url('/images/footer/footer-bg.png')",
+        backgroundImage: "url('/backoffice/images/footer/footer-bg.png')",
         backgroundSize: "cover",
         backgroundPosition: "top",
         backgroundRepeat: "repeat-y",

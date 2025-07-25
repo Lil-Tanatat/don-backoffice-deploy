@@ -1,6 +1,6 @@
 import * as React from "react";
 import Image from "next/image";
-import Logo from "../../public/images/New Navbar Logo.png";
+import Logo from "../../public/backoffice/images/New Navbar Logo.png";
 import {
   KeyboardSensor,
   MouseSensor,

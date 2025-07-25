@@ -173,7 +173,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
             >
               <Link href="/home" className="flex items-center gap-2">
                 <Image
-                  src="/images/New Navbar Logo.png"
+                  src="/backoffice/images/New Navbar Logo.png"
                   alt="logo"
                   width={32}
                   height={32}

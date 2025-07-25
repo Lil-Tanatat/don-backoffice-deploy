@@ -22,14 +22,22 @@ const FOOTER_SECTIONS = [
 ];
 
 const SOCIAL_LINKS = [
-  { name: "Facebook", icon: "/images/footer/facebook.png", href: "#" },
-  { name: "Youtube", icon: "/images/footer/youtube.png", href: "#" },
-  { name: "Instagram", icon: "/images/footer/instagram.png", href: "#" },
-  { name: "Twitter", icon: "/images/footer/twitter.png", href: "#" },
+  {
+    name: "Facebook",
+    icon: "/backoffice/images/footer/facebook.png",
+    href: "#",
+  },
+  { name: "Youtube", icon: "/backoffice/images/footer/youtube.png", href: "#" },
+  {
+    name: "Instagram",
+    icon: "/backoffice/images/footer/instagram.png",
+    href: "#",
+  },
+  { name: "Twitter", icon: "/backoffice/images/footer/twitter.png", href: "#" },
 ];
 
 const COMPANY_INFO = {
-  logo: "/images/logo.png",
+  logo: "/backoffice/images/logo.png",
   description:
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean fermentum sapien eget leo sodales vehicula nec consequat quam.",
   copyright: "HEALTH UP",
@@ -86,7 +94,7 @@ export function Footer() {
   return (
     <div
       style={{
-        backgroundImage: "url('/images/footer/footer-bg.png')",
+        backgroundImage: "url('/backoffice/images/footer/footer-bg.png')",
         backgroundSize: "contain",
         backgroundPosition: "top",
         backgroundRepeat: "repeat-y",
