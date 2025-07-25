@@ -1,0 +1,71 @@
+{
+  "formSections": [
+    {
+      "title": "รายละเอียดผู้ใช้งาน",
+      "fields": [
+        {
+          "name": "first_name",
+          "label": "ชื่อ",
+          "type": "text",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "last_name",
+          "label": "นามสกุล",
+          "type": "text",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "phone",
+          "label": "เบอร์โทรศัพท์",
+          "type": "tel",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "job_position",
+          "label": "ตำแหน่ง",
+          "type": "text",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "username",
+          "label": "ชื่อผู้ใช้งาน",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "description": "ตัวอักษร 4 ตัวอักษรขึ้นไป ภาษาอังกฤษ A-Z, a-z ตัวเลข 0-9"
+        },
+        {
+          "name": "password",
+          "label": "รหัสผ่าน",
+          "type": "password",
+          "required": true,
+          "colSpan": 3,
+          "description": "ตัวอักษร 8 ตัวอักษรขึ้นไป ภาษาอังกฤษ A-Z, a-z ตัวเลข 0-9 อักขระพิเศษ เช่น !@#$%"
+        },
+        {
+          "name": "tax_id",
+          "label": "เลขประจำตัวประชาชน",
+          "type": "text",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "role",
+          "label": "บทบาท",
+          "type": "select",
+          "required": true,
+          "colSpan": 3,
+          "options": [
+            { "title": "ผู้จัดการระบบ", "value": "supervisor" },
+            { "title": "ผู้ดูแลระบบ", "value": "admin" }
+          ]
+        }
+      ]
+    }
+  ]
+}

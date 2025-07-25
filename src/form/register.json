@@ -1,0 +1,191 @@
+{
+  "formSections": [
+    {
+      "title": "รายละเอียดสถานประกอบการ",
+      "fields": [
+        {
+          "name": "org_name",
+          "label": "ชื่อสถานประกอบกิจการ",
+          "type": "text",
+          "required": true,
+          "colSpan": 6,
+          "mobileColSpan": 12
+        },
+        {
+          "name": "org_code",
+          "label": "รหัสสถานประกอบกิจการ",
+          "type": "text",
+          "required": true,
+          "colSpan": 6,
+          "mobileColSpan": 12
+        },
+        {
+          "name": "employee_total",
+          "label": "จำนวนพนักงานทั้งหมด",
+          "type": "text",
+          "required": true,
+          "colSpan": 4,
+          "mobileColSpan": 12
+        },
+        {
+          "name": "org_size",
+          "label": "ขนาดองค์กร",
+          "type": "select",
+          "required": true,
+          "colSpan": 4,
+          "mobileColSpan": 12,
+          "options": [
+            { "title": "ขนาด S", "value": "SMALL" },
+            { "title": "ขนาด M", "value": "MEDIUM" },
+            { "title": "ขนาด L", "value": "LARGE" }
+          ]
+        },
+        {
+          "name": "org_address",
+          "label": "รายละเอียดที่อยู่",
+          "type": "text",
+          "required": true,
+          "colSpan": 4,
+          "mobileColSpan": 12
+        },
+        {
+          "name": "org_province",
+          "label": "จังหวัด",
+          "type": "select",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 6,
+          "options": []
+        },
+        {
+          "name": "org_area",
+          "label": "อำเภอ / เขต",
+          "type": "select",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 6,
+          "options": []
+        },
+        {
+          "name": "org_district",
+          "label": "ตำบล / แขวง",
+          "type": "select",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 6,
+          "options": []
+        },
+        {
+          "name": "org_zipcode",
+          "label": "รหัสไปรษณีย์",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 6
+        },
+        {
+          "name": "org_phone",
+          "label": "เบอร์โทรศัพท์ติดต่อ (ผู้ประสานงานสถานประกอบกิจการ)",
+          "type": "text",
+          "required": true,
+          "colSpan": 6,
+          "mobileColSpan": 12
+        },
+        {
+          "name": "org_email",
+          "label": "อีเมล",
+          "type": "email",
+          "required": true,
+          "colSpan": 6,
+          "mobileColSpan": 12
+        },
+        {
+          "name": "org_activities",
+          "label": "กิจกรรมประเมินสุขภาพองค์กร",
+          "type": "multiselect",
+          "required": false,
+          "colSpan": 12,
+          "mobileColSpan": 12,
+          "options": [
+            { "title": "กิจกรรมทางกาย", "value": "กิจกรรมทางกาย" },
+            { "title": "สุขภาพจิต", "value": "สุขภาพจิต" },
+            { "title": "โภชนาการ", "value": "โภชนาการ" },
+            { "title": "การเลิกบุหรี่", "value": "การเลิกบุหรี่" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "รายละเอียดผู้ดูแล",
+      "fields": [
+        {
+          "name": "first_name",
+          "label": "ชื่อ",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 6
+        },
+        {
+          "name": "last_name",
+          "label": "นามสกุล",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 6
+        },
+        {
+          "name": "phone",
+          "label": "เบอร์โทรศัพท์",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 6
+        },
+        {
+          "name": "job_position",
+          "label": "ตำแหน่ง",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 6
+        },
+        {
+          "name": "username",
+          "label": "ชื่อผู้ใช้งาน",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 12,
+          "description": "ตัวอักษร 4 ตัวอักษรขึ้นไป ภาษาอังกฤษ A-Z, a-z ตัวเลข 0-9"
+        },
+        {
+          "name": "password",
+          "label": "รหัสผ่าน",
+          "type": "password",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 12,
+          "description": "ตัวอักษร 8 ตัวอักษรขึ้นไป ภาษาอังกฤษ A-Z, a-z ตัวเลข 0-9 อักขระพิเศษ เช่น !@#$%"
+        },
+        {
+          "name": "confirm_password",
+          "label": "ยืนยันรหัสผ่าน",
+          "type": "password",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 12,
+          "description": ""
+        },
+        {
+          "name": "citizen_id",
+          "label": "เลขบัตรประชาชน",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "mobileColSpan": 12
+        }
+      ]
+    }
+  ]
+}

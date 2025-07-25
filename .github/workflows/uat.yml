@@ -1,0 +1,108 @@
+name: UAT Deploy DOH Back Office
+
+on:
+  push:
+    tags:
+      - '*' # Trigger only on tags, regardless of branch
+
+jobs:
+  deploy:
+    runs-on:
+      - self-hosted
+      - Linux
+      - X64
+      - dev01.softsq.com
+    environment: 'uat'
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Check if tag is from main branch
+      id: check-branch
+      run: |
+        # Get the tag name
+        TAG_NAME=${GITHUB_REF#refs/tags/}
+        echo "Tag name: $TAG_NAME"
+        
+        # Check if this tag points to a commit in main branch
+        if git branch -r --contains $(git rev-parse $TAG_NAME) | grep -q "origin/main"; then
+          echo "✅ Tag $TAG_NAME is from main branch"
+          echo "deploy=true" >> $GITHUB_OUTPUT
+        else
+          echo "❌ Tag $TAG_NAME is NOT from main branch"
+          echo "deploy=false" >> $GITHUB_OUTPUT
+          exit 1
+        fi
+
+    - name: Set working directory
+      run: |
+        # ตรวจสอบว่า directory นี้มีอยู่จริง
+        if [ ! -d "/opt/project-stacks/doh/uat-doh-backoffice" ]; then
+          echo "Directory /opt/project-stacks/doh/uat-doh-backoffice does not exist. Creating it."
+          sudo mkdir -p /opt/project-stacks/doh/uat-doh-backoffice
+          sudo chown -R $USER:$USER /opt/project-stacks/doh/uat-doh-backoffice # เปลี่ยน owner ให้ user ที่รัน action
+        fi
+        echo "dir=/opt/project-stacks/doh/uat-doh-backoffice" >> $GITHUB_OUTPUT
+      id: set_dir
+
+    - name: Stop and remove existing Docker Compose services
+      working-directory: ${{ steps.set_dir.outputs.dir }}
+      run: |
+        echo "Stopping existing Docker Compose services..."
+        # ตรวจสอบว่ามี docker-compose.yml อยู่ก่อนที่จะสั่ง stop
+        if [ -f docker-compose.yml ]; then
+          docker compose down || true # ใช้ || true เพื่อให้ action ไม่ fail หาก service ไม่มีอยู่
+        else
+          echo "docker-compose.yml not found, skipping docker compose down."
+        fi
+        echo "Existing Docker Compose services stopped (if any)."
+
+    - name: Remove old code and copy new code
+      working-directory: /opt/project-stacks/doh/
+      run: |
+        echo "Removing old doh-frontend directory..."
+        # ลบ directory เก่าและคัดลอกใหม่ (จากที่ checkout มา)
+        sudo rm -rf uat-doh-backoffice
+        echo "Copying new uat-doh-backoffice directory..."
+        sudo cp -R ${{ github.workspace }} uat-doh-backoffice
+        echo "New code copied."
+        # เปลี่ยน owner เพื่อให้ runner มีสิทธิ์จัดการไฟล์
+        sudo chown -R $USER:$USER uat-doh-backoffice
+
+    - name: Clean up old docker-compose.yml
+      working-directory: ${{ steps.set_dir.outputs.dir }}
+      run: |
+        echo "Removing old docker-compose.yml..."
+        rm -f docker-compose.yml || true # ใช้ || true เพื่อไม่ให้ fail หากไฟล์ไม่มีอยู่
+        echo "Old docker-compose.yml removed."
+
+    - name: Create .env.production
+      working-directory: ${{ steps.set_dir.outputs.dir }}
+      run: |
+        echo "Creating .env.production file..."
+        echo "NEXT_PUBLIC_API_END_POINT=${{ vars.NEXT_PUBLIC_API_END_POINT }}" > .env.production
+        echo "NEXT_TELEMETRY_DISABLED=${{ vars.NEXT_TELEMETRY_DISABLED }}" >> .env.production
+        echo "NODE_ENV=${{ vars.NODE_ENV }}" >> .env.production
+        echo "PORT=${{ vars.PORT }}" >> .env.production
+        echo "PYTHON_API_URL=${{ vars.PYTHON_API_URL }}" >> .env.production
+        echo "SUPABASE_API_URL=${{ vars.SUPABASE_API_URL }}" >> .env.production
+        echo "SUPABASE_ANON_KEY=${{ secrets.SUPABASE_ANON_KEY }}" >> .env.production
+        echo ".env.production created."
+        
+        cp .env.production .env
+        echo ".env created."
+
+    - name: Copy docker-compose.uat.yml to docker-compose.yml
+      working-directory: ${{ steps.set_dir.outputs.dir }}
+      run: |
+        echo "Copying docker-compose.uat.yml to docker-compose.yml..."
+        cp docker-compose.uat.yml docker-compose.yml
+        echo "File copied."
+
+    - name: Docker Compose Up -d --build
+      working-directory: ${{ steps.set_dir.outputs.dir }}
+      run: |
+        echo "Running docker compose up -d --build..."
+        sudo -E docker compose up -d --build
+        echo "Docker Compose services are up and running."

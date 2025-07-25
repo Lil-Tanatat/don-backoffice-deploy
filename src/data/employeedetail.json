@@ -1,0 +1,83 @@
+{
+  "employeeName": "นายสมชาย สมบูรณ์",
+  "employeeId": "B12345",
+  "age": 30,
+  "employeePosition": "ผู้จัดการฝ่ายขาย",
+  "maritalStatus": "โสด",
+  "nationality": "ไทย",
+  "gender": "ชาย",
+  "height": 170,
+  "weight": 70,
+  "waistCircumference": 90,
+  "congenitalDisease": "ไม่มี",
+  "summary": {
+    "waistCircumference": {
+      "title": "รอบเอว",
+      "result": 25,
+      "standard": 25,
+      "status": "GOOD",
+      "note": "รอบเอวต่ำกว่าระดับปกติ"
+    },
+    "bmi": {
+      "title": "ค่าดัชนีมวลกาย (BMI)",
+      "result": 25,
+      "standard": 25,
+      "status": "RISK",
+      "note": "ค่าดัชนีมวลกายต่ำกว่าระดับปกติ"
+    },
+    "cholesterol": {
+      "title": "คอเลสเตอรอล",
+      "result": 25,
+      "standard": 25,
+      "status": "SICK",
+      "note": "คอเลสเตอรอลสูงกว่าระดับปกติ"
+    },
+    "triglyceride": {
+      "title": "ไขมันไตรกลีเซอรอล",
+      "result": 25,
+      "standard": 25,
+      "status": "RISK",
+      "note": "ไขมันไตรกลีเซอรอลสูงกว่าระดับปกติ"
+    },
+    "bloodSugar": {
+      "title": "น้ำตาลในเลือด",
+      "result": 25,
+      "standard": 25,
+      "status": "RISK",
+      "note": "น้ำตาลเลือดสูงกว่าระดับปกติ"
+    },
+    "bloodPressure": {
+      "title": "ความดันเลือด",
+      "result": 25,
+      "standard": 25,
+      "status": "GOOD",
+      "note": "ความดันเลือดต่ำกว่าระดับปกติ"
+    }
+  },
+  "reccomendation": {
+    "shortTerm": {
+      "title": "ระยะสั้น (1-3 เดือน)",
+      "reccomendation": [
+        "กินอาหารที่มีคุณภาพสูง",
+        "กินอาหารที่มีคุณภาพสูง",
+        "กินอาหารที่มีคุณภาพสูง"
+      ]
+    },
+    "mediumTerm": {
+      "title": "ระยะกลาง (3-6 เดือน)",
+      "reccomendation": [
+        "กินอาหารที่มีคุณภาพสูง",
+        "กินอาหารที่มีคุณภาพสูง",
+        "กินอาหารที่มีคุณภาพสูง"
+      ]
+    },
+    "longTerm": {
+      "title": "ระยะยาว (6 เดือนขึ้นไป)",
+      "reccomendation": [
+        "กินอาหารที่มีคุณภาพสูง",
+        "กินอาหารที่มีคุณภาพสูง",
+        "กินอาหารที่มีคุณภาพสูง"
+      ]
+    }
+  }
+}

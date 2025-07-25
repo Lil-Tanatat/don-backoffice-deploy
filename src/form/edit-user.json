@@ -1,0 +1,76 @@
+{
+  "formSections": [
+    {
+      "title": "รายละเอียดผู้ใช้งาน",
+      "fields": [
+        {
+          "name": "first_name",
+          "label": "ชื่อ",
+          "type": "text",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "last_name",
+          "label": "นามสกุล",
+          "type": "text",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "phone",
+          "label": "เบอร์โทรศัพท์",
+          "type": "tel",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "job_position",
+          "label": "ตำแหน่ง",
+          "type": "text",
+          "required": true,
+          "colSpan": 3
+        },
+
+        {
+          "name": "username",
+          "label": "ชื่อผู้ใช้งาน",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "disabled": true
+        },
+        {
+          "name": "password",
+          "label": "รหัสผ่าน",
+          "type": "password",
+
+          "colSpan": 3
+        },
+        {
+          "name": "tax_id",
+          "label": "เลขประจำตัวประชาชน",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "disabled": true
+        },
+        {
+          "name": "role",
+          "label": "บทบาท",
+          "type": "select",
+          "required": true,
+          "colSpan": 3,
+          "options": [
+            {
+              "title": "ผู้จัดการระบบ",
+              "value": "supervisor"
+            },
+            { "title": "ผู้ดูแลระบบ", "value": "admin" }
+          ],
+          "disabled": true
+        }
+      ]
+    }
+  ]
+}

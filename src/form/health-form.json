@@ -1,0 +1,189 @@
+{
+  "formSections": [
+    {
+      "title": "ข้อมูลทั่วไปขอพนักงาน",
+      "fields": [
+        {
+          "name": "employee_code",
+          "label": "เลขประจำตัวพนักงาน (Employee ID)",
+          "type": "text",
+          "required": true,
+          "colSpan": 6
+        },
+        {
+          "name": "tax_id",
+          "label": "เลขประจำตัวประชาชนพนักงาน",
+          "type": "text",
+          "required": true,
+          "colSpan": 6
+        },
+        {
+          "name": "first_name",
+          "label": "ชื่อ",
+          "type": "text",
+          "required": true,
+          "colSpan": 6
+        },
+        {
+          "name": "last_name",
+          "label": "นามสกุล",
+          "type": "text",
+          "required": true,
+          "colSpan": 6
+        },
+        {
+          "name": "job_position",
+          "label": "ตำแหน่ง",
+          "type": "text",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "birth_date",
+          "label": "วัน / เดือน / ปีเกิด",
+          "type": "date",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "gender",
+          "label": "เพศ",
+          "type": "select",
+          "required": true,
+          "colSpan": 3,
+          "options": [
+            { "title": "ชาย", "value": "ชาย" },
+            { "title": "หญิง", "value": "หญิง" }
+          ]
+        },
+        {
+          "name": "age",
+          "label": "อายุ",
+          "type": "text",
+          "required": true,
+          "disabled": true,
+          "colSpan": 3
+        },
+        {
+          "name": "nationality",
+          "label": "สัญชาติ",
+          "type": "select",
+          "required": true,
+          "colSpan": 6,
+          "options": [
+            { "title": "ไทย", "value": "ไทย" },
+            { "title": "อื่นๆ", "value": "อื่นๆ" }
+          ]
+        },
+        {
+          "name": "marital_status",
+          "label": "สถานภาพการสมรส",
+          "type": "select",
+          "required": true,
+          "colSpan": 6,
+          "options": [
+            { "title": "โสด", "value": "โสด" },
+            { "title": "แต่งงาน", "value": "แต่งงาน" },
+            { "title": "หย่าร้าง", "value": "หย่าร้าง" },
+            { "title": "หม้าย", "value": "หม้าย" }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ข้อมูลด้านสุขภาพ",
+      "fields": [
+        {
+          "name": "weight_kg",
+          "label": "น้ำหนักตัว",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "unit": "กิโลกรัม"
+        },
+        {
+          "name": "height_cm",
+          "label": "ส่วนสูง",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "unit": "เซนติเมตร"
+        },
+        {
+          "name": "waist_cm",
+          "label": "รอบเอว",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "unit": "ซม."
+        },
+        {
+          "name": "bmi",
+          "label": "ดัชนีมวลกาย (BMI)",
+          "type": "text",
+          "required": false,
+          "colSpan": 3,
+          "disabled": true,
+          "description": "BMI = น้ำหนัก (kg) ÷ [ส่วนสูง (m)]²"
+        },
+        {
+          "name": "blood_pressure_systolic",
+          "label": "ระดับความดันโลหิต (ค่าบน)",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "unit": "mmHg"
+        },
+        {
+          "name": "blood_pressure_diastolic",
+          "label": "ระดับความดันโลหิต (ค่าล่าง)",
+          "type": "text",
+          "required": true,
+          "colSpan": 3,
+          "unit": "mmHg"
+        },
+        {
+          "name": "blood_sugar",
+          "label": "ระดับน้ำตาลในเลือด",
+          "type": "text",
+          "required": true,
+          "colSpan": 6,
+          "unit": "mg/dL"
+        },
+        {
+          "name": "underlying_disease",
+          "label": "โรคประจำตัว",
+          "type": "text",
+          "required": false,
+          "colSpan": 6
+        },
+        {
+          "name": "cholesterol",
+          "label": "ไขมันคอเลสเตอรอล (Cholesterol)",
+          "type": "text",
+          "required": true,
+          "colSpan": 3
+        },
+        {
+          "name": "triglyceride",
+          "label": "ไขมันไตรกลีเซอไรด์ (Triglyceride)",
+          "type": "text",
+          "required": true,
+          "colSpan": 3
+        }
+      ]
+    },
+    {
+      "title": "ข้อมูลพฤติกรรมสุขภาพ",
+      "fields": [
+        {
+          "name": "health_behavior",
+          "label": "ข้อมูลพฤติกรรมสุขภาพ",
+          "type": "textarea",
+          "colSpan": 12,
+          "placeholder": "โปรดระบุข้อมูลเกี่ยวกับพฤติกรรมสุขภาพ เช่น การออกกำลังกาย การบริโภคอาหาร นิสัยการนอนหลับ การดูแลสุขภาพ เป็นต้น"
+        }
+      ]
+    }
+  ]
+}

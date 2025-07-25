@@ -1,0 +1,18 @@
+name: uat-doh-backoffice
+services:
+  app-uat:
+    image: uat-doh-backoffice:uat
+    container_name: uat-doh-backoffice
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - ${PORT:-3000}:3000
+    restart: unless-stopped
+
+networks:
+  default:
+    name: uat-doh-network
+volumes:
+  next_build_cache: null

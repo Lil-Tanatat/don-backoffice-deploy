@@ -1,0 +1,18 @@
+name: dev-doh-backoffice
+services:
+  app-dev:
+    image: dev-doh-backoffice:dev
+    container_name: dev-doh-backoffice
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    ports:
+      - ${PORT:-3000}:3000
+    restart: unless-stopped
+
+networks:
+  default:
+    name: dev-doh-network
+volumes:
+  next_build_cache: null

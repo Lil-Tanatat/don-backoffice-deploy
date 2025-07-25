@@ -1,0 +1,25 @@
+[
+  {
+    "employeeName": "นายสมชาย ใจดี",
+    "employeeId": "B12345",
+    "employeePosition": "ผู้จัดการฝ่ายขาย",
+    "result": {
+      "bmi": 25,
+      "cholesterol": 200,
+      "triglyceride": 150,
+      "bloodSugar": 100,
+      "bloodPressure": 120,
+      "waistCircumference": 90
+    },
+    "warning": [
+      {
+        "title": "ไขมันคอเลสเตอรอลในเลือดสูง",
+        "reccomendation": "ควรพบแพทย์รับการรักษาต่อเนื่อง และปฏิบัติตามหลัก 3อ 2ส ลดอาหารหวาน มัน เค็ม"
+      },
+      {
+        "title": "เสี่ยงโรคความดันโลหิตสูง",
+        "reccomendation": "พบแพทย์เพื่อวินิจฉัยรับการรักษา และติดตามเฝ้าระวังอย่างสม่ำเสมอ"
+      }
+    ]
+  }
+]

@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "name": "สมชาย ใจดี",
+    "email": "somchai.jaidee@company.com",
+    "username": "somchai.j",
+    "nationalId": "1234567890123",
+    "position": "หัวหน้าแผนก IT",
+    "role": "ผู้ดูแลระบบ"
+  },
+  {
+    "id": "2",
+    "name": "สมหญิง สุขสันต์",
+    "email": "somying.sooksan@company.com",
+    "username": "somying.s",
+    "nationalId": "2345678901234",
+    "position": "นักวิเคราะห์ระบบ",
+    "role": "ผู้จัดการระบบ"
+  },
+  {
+    "id": "3",
+    "name": "วิชัย เก่งมาก",
+    "email": "wichai.kengmak@company.com",
+    "username": "wichai.k",
+    "nationalId": "3456789012345",
+    "position": "โปรแกรมเมอร์",
+    "role": "ผู้จัดการระบบ"
+  },
+  {
+    "id": "4",
+    "name": "สุดา รักงาน",
+    "email": "suda.rakgan@company.com",
+    "username": "suda.r",
+    "nationalId": "4567890123456",
+    "position": "ผู้ช่วยผู้จัดการ",
+    "role": "ผู้ดูแลระบบ"
+  },
+  {
+    "id": "5",
+    "name": "ประยุทธ์ มุ่งมั่น",
+    "email": "prayuth.mungman@company.com",
+    "username": "prayuth.m",
+    "nationalId": "5678901234567",
+    "position": "เจ้าหน้าที่ฝ่ายบุคคล",
+    "role": "ผู้ดูแลระบบ"
+  }
+]
